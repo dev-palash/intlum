@@ -1,0 +1,48 @@
+@import "../../../../../assets/mixins/UI_mixins";
+
+.infra_section{
+  background-color: rgb(228, 215, 215);
+  height: 24rem;
+  .headings{
+    width: 22rem;
+    text-align: center;
+    // border: 1px solid red;
+    margin: 2rem auto;
+    .head1{
+      @include fontStyle(black, 2.5rem, normal);
+      margin-left: 2rem;
+    }
+    .head2{
+    @include fontStyle(rgb(71, 170, 13), 2.8rem, normal);
+    }
+  }
+  .card_parent{
+    @include displayFlex(space-between, center);
+    .card_child{
+      height: 8rem;
+      width: 8rem;
+      // margin-top: 10rem;
+
+      .card_img{
+        // border: 1px solid red;
+        position: relative;
+        .card_img1{
+          position: absolute;
+          z-index: 9;
+        }
+        .card_img2{
+          position: absolute;
+          z-index: 99;
+        }
+      }
+      .card_text{
+        margin-top: 6rem;
+      }
+
+    }
+    .card_child:not(:last-child) {
+      border-right: 0.1rem solid rgb(201, 193, 193);
+      // content: 'not in the bottom div';
+  }
+  }
+}

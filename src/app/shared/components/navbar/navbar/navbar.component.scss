@@ -1,0 +1,30 @@
+@import "../../../../../assets/mixins/UI_mixins";
+.custom_class_navbar{
+  background-color: rgb(9, 133, 9);
+  .navbar-brand{
+    @include fontStyle(white, 2rem, bold);
+    font-family: 'Dancing Script', cursive;
+    // background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #ebeade, #ccae06);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+.navbar-collapse{
+  // @include displayFlex(space-between, center);
+  // border: 1px solid red;
+  margin-left: 4rem;
+  ul{
+    // @include displayFlex(space-around, center);
+    margin-left: 4rem;
+    li{
+      a{
+        @include fontStyle(white, 1rem, normal)
+      }
+    }
+  }
+}
+}

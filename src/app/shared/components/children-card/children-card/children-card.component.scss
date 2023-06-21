@@ -1,0 +1,114 @@
+@import "../../../../../assets/mixins/UI_mixins";
+.card_section{
+  padding: 1rem;
+  background-color: rgb(241, 232, 232);
+  @include displayFlex(space-around, center);
+  .card_container {
+    position: relative;
+    width: 20rem;
+    height: 28rem;
+    background: rgb(250, 244, 244);
+    // padding: 30px;
+    // border-radius: 12px;
+    overflow: hidden;
+    .img_container{
+      // border: solid 1px red;
+      img{
+        width: 100%;
+      }
+    }
+    .card_detail{
+      margin-left: 2rem;
+      .title{
+        p{
+          @include fontStyle(black, 1.7rem, normal);
+          span{
+           @include fontStyle(black, 1.9rem, 600);
+          }
+         }
+      }
+      .description{
+        .description_child{
+          // border: 1px solid red;
+          @include displayFlex(left, center);
+          .bg_color1{
+            background-color: #e2bd16;
+          }
+          .bg_color2{
+            background-color: #3b6311;
+          }
+          .bg_color3{
+            background-color: #f58b13;
+          }
+          .list_order{
+            height: 1.4rem;
+            width: 1.4rem;
+            border-radius: 50%;
+            // background-color: rgb(255, 115, 0);
+            // padding: 0.02rem;
+            // color: wheat;
+            text-align: center;
+            // font-weight: 600;
+            @include fontStyle(white, 0.9rem, bold);
+            margin-right: 0.8rem;
+            margin-bottom: 0.3rem;
+          }
+        }
+
+      }
+    }
+    .button_container{
+      margin-bottom: 1.9rem;
+      button{
+        border: 0.1rem solid rgb(255, 115, 0);
+        color: rgb(255, 115, 0);
+        background-color: white;
+      }
+    }
+  }
+
+  .card_container:nth-child(1)::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: transparent #608A32 transparent transparent;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  .card_container:nth-child(2)::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: transparent #e2bd16 transparent transparent;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  .card_container:nth-child(3)::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: transparent #3b6311 transparent transparent;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  .card_container:nth-child(4)::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 0;
+    border-color: transparent #f58b13 transparent transparent;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+}

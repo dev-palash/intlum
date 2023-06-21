@@ -1,0 +1,41 @@
+@import "../../../../../assets/mixins/UI_mixins";
+.holiday_section{
+  text-align: center;
+  .header{
+    @include fontStyle(black, 2.2rem, normal);
+    span{
+    @include fontStyle(rgb(20, 145, 16), 2.2rem, normal);
+    }
+  }
+  .card_parent{
+    @include displayFlex(center, center);
+    .left_arrow{
+      margin-bottom: 8rem;
+    }
+    .right_arrow{
+      margin-bottom: 8rem;
+      margin-left: 2rem;
+    }
+    .card_child{
+      height: 20rem;
+      width: 16rem;
+      padding: 1rem;
+      .img_container{
+        border: 2px solid rgb(204, 194, 194);
+        height: 11.5rem;
+        width: 16rem;
+        @include displayFlex(center, center);
+      }
+      .description{
+        @include fontStyle(black, 1.2rem, 500)
+      }
+      .line{
+        height: 0.5rem;
+        width: 3rem;
+        margin: 1rem auto;
+        background-color: orange;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../../../../assets/mixins/UI_mixins";
+@import "../../../../../assets/color/colors";
+.header_container{
+  background-color: black;
+  padding: 0.3rem;
+  .sub_header_container{
+    @include displayFlex(space-between, center);
+    .first_content{
+      p{
+        @include fontStyle(rgb(219, 211, 211), 0.8rem, normal);
+      }
+
+    }
+    .second_content{
+      @include displayFlex(space-between, center);
+      .enquery{
+        @include fontStyle(rgb(219, 211, 211), 0.8rem, normal);
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        p{
+          span{
+            color: rgb(69, 110, 7);
+          }
+        }
+      }
+      .login_button{
+        // margin-bottom: 1.5rem;
+        button{
+          background-color: rgb(255, 115, 0);
+          outline: none;
+          border: none;
+          height: 3rem;
+          width: max-content;
+          margin-left: 0;
+          color: aliceblue;
+        }
+      }
+    }
+  }
+}
